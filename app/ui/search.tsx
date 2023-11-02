@@ -12,14 +12,19 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const handleSearch = useDebouncedCallback((term) => {
     console.log(`Searching... ${term}`)
     const params = new URLSearchParams(searchParams);
+    // pagination, reset the page number to 1.
     params.set('page', '1');
-    
+
     if (term) {
       params.set('query', term);
     } else {
       params.delete('query');
     }
 
+    // As the user types into the search bar, params.toString() translates this input into a 
+    // URL-friendly format.
+    // The replace(${pathname}?${params.toString()}); command updates the URL with the user's 
+    // search data. For example, /dashboard/invoices?query=lee if the user searches for "lee".
     replace(`${pathname}?${params.toString()}`);
   }, 360);
 
