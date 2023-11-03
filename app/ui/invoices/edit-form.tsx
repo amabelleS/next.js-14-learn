@@ -22,7 +22,6 @@ export default function EditInvoiceForm({
   const initialState = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
   const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
-  // This will ensure that any values passed to the Server Action are encoded.
 
   return (
     <form action={dispatch}>

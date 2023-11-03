@@ -22,7 +22,8 @@ const InvoiceSchema = z.object({
  
 // Use Zod to update the expected types
 const CreateInvoice = InvoiceSchema.omit({ id: true, date: true });
-const UpdateInvoice = InvoiceSchema.omit({ date: true });
+// I added id: true (It was not in the tutorial)
+const UpdateInvoice = InvoiceSchema.omit({ date: true, id: true });
 const DeleteInvoice = InvoiceSchema.omit({ date: true, id: true });
 
 export type State = {
