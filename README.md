@@ -4,9 +4,9 @@ This is the starter template for the Next.js App Router Course. It contains the 
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
 
-![login user&pass](public/readme/hero-desktop.png)
-
 #### to login:
 
 - user: 'user@nextmail.com'
 - password: '123456'
+
+![login user&pass](public/readme/hero-desktop.png)
